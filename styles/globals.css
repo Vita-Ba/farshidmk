@@ -1,9 +1,28 @@
+:root {
+  --dark: #000000;
+  --light: #ffffff;
+  --gray: #949799;
+  --gray-light: #dce4e7;
+  --borderSize: 4px;
+  --box-padding: 8px;
+}
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  direction: rtl;
+  font-family: yekan;
+  font-size: clamp(18px, 2vw, 36px);
+}
+
+@font-face {
+  font-family: yekan;
+  src: url(../yekan.ttf);
+}
+@font-face {
+  font-family: dastnevis;
+  src: url(../dastNevis.otf);
 }
 
 a {
@@ -13,4 +32,117 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+.bg-dark {
+  background-color: var(--dark);
+}
+
+.bg-light {
+  background-color: var(--light);
+}
+
+.bg-gray {
+  background-color: var(--gray);
+}
+
+.text-dark {
+  color: var(--dark);
+}
+.text-light {
+  color: var(--light);
+}
+.text-shadow-light {
+  text-shadow: 0px 0px 5px var(--light);
+}
+.text-shadow-dark {
+  text-shadow: 0px 0px 5px var(--dark);
+}
+.text-shadow-gray-light {
+  text-shadow: 0px 0px 5px var(--gray-light);
+}
+
+.border-radius-1 {
+  border-radius: 16px;
+}
+
+.shadow-dark-small {
+  box-shadow: 1px 1px 1px var(--dark);
+}
+.shadow-dark-medium {
+  box-shadow: 1px 1px 5px var(--dark);
+}
+
+.root {
+  position: relative;
+  margin: auto;
+  min-height: 100vh;
+  max-width: 1300px;
+}
+
+.header-section {
+  background-color: var(--gray-light);
+  z-index: 1;
+  position: sticky;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px;
+  background: rgba(255, 255, 255, 0.603);
+  backdrop-filter: blur(8px);
+}
+.header-icon {
+  height: 1.3rem;
+  width: auto;
+  padding: 0.2rem;
+  border-radius: 50%;
+  border: 2px solid var(--dark);
+}
+.header-text {
+  font-family: dastnevis;
+  font-size: 0.7rem;
+  margin: 0px;
+}
+
+.container {
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  max-width: 1300px;
+  background-color: var(--gray-light);
+}
+
+.gray-box {
+  border: var(--borderSize) solid var(--gray);
+  padding: var(--box-padding);
+}
+.gray-light-box {
+  border: var(--borderSize) solid var(--gray-light);
+  padding: var(--box-padding);
+}
+
+hr {
+  width: 85%;
+  background-color: var(--gray);
+  height: 3px;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.no-margin {
+  margin: 0px;
+}
+
+.description-text {
+  font-size: 0.4rem;
+  font-weight: 100;
 }
