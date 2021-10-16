@@ -1,0 +1,92 @@
+.root {
+  background-color: rgb(153 164 165);
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-image: repeating-linear-gradient(
+    -45deg,
+    transparent,
+    transparent 13px,
+    #ff000021 14px,
+    #ff9b9b4d 17px
+  );
+}
+
+.sections {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.number {
+  font-size: 6rem;
+  font-weight: 900;
+}
+.errorSection {
+  position: relative;
+  width: 100%;
+  text-align: center;
+}
+
+.errorText {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  font-weight: 900;
+  text-shadow: 1px 1px 1px black;
+}
+
+.hintText {
+  font-weight: 800;
+  padding: 8px;
+  text-align: center;
+  text-shadow: 0px 0px 12px white;
+  max-width: 900px;
+  margin: 0px;
+}
+
+.underLineText {
+  text-decoration: underline;
+}
+
+.homeBtn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  font-size: 0.8rem;
+  background: white;
+  border-radius: 8px;
+  padding: 12px;
+  font-weight: 600;
+  width: 7rem;
+  border: 2px solid black;
+  justify-content: space-evenly;
+  transition: all 0.8s ease-in;
+  overflow: hidden;
+}
+.homeText,
+.homeIcon {
+  transition: all 0.8s ease-in;
+}
+.homeIcon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+}
+
+.homeBtn:hover .homeText,
+.homeBtn:focus .homeText {
+  transform: translateX(-6rem);
+}
+.homeBtn:hover .homeIcon,
+.homeBtn:focus .homeIcon {
+  opacity: 1;
+  font-size: 1.9rem;
+}
