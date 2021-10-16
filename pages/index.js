@@ -1,8 +1,7 @@
-import Head from "next/head";
-import Image from "next/image";
-import Layout from "../components/Layout";
-import styles from "../styles/Home.module.css";
-import myPhoto from "../public/assets/images/profile.jpg";
+import Link from "next/link";
+import Layout from "@/components/Layout";
+import styles from "@/styles/Home.module.css";
+import { SECTIONS } from "../shared/sections";
 
 export default function HomePage() {
   return (
@@ -11,7 +10,9 @@ export default function HomePage() {
         <div className={styles.imageContainer}>
           <div className={styles.photoByText}>
             <p>Photo By: sasha freemind</p>
-            <p>from unsplash.com</p>
+            <p>
+              From <a href="http://www.unsplash.com">unsplash.com</a>
+            </p>
           </div>
         </div>
         <div className={`gray-box ${styles.introductionSection}`}>
@@ -35,8 +36,22 @@ export default function HomePage() {
             داره رو قراره تو این وبلاگ بنویسم
           </p>
         </div>
+        <div className={styles.sectionCards}>
+          {SECTIONS?.map((section) => (
+            <Link key={section.id} href={section.link}>
+              <a>
+                <div
+                  className={`dark-box-with-hover ${styles.sectionCardRoot}`}
+                >
+                  <span className="border-bottom-rem">{section.title}</span>
+                  <span className="margin-top-small">{section.icon}</span>
+                </div>
+              </a>
+            </Link>
+          ))}
+        </div>
         {/* 1. show blog sections with icons - sher, resume, ketab, tajrobiat
-          2. show hire me or contact me
+          2. show hire me or contact me be soorate ofoghi kenar
        */}
       </>
     </Layout>

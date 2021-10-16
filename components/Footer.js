@@ -1,5 +1,7 @@
-import styles from "../styles/Footer.module.css";
+import Link from "next/link";
+import styles from "@/styles/Footer.module.css";
 import { BsLinkedin, BsFacebook, BsTelegram } from "react-icons/bs";
+import { SECTIONS } from "../shared/sections";
 
 const Footer = () => {
   return (
@@ -31,7 +33,7 @@ const Footer = () => {
             من فرشید منوچهری کلانتری هستم. دارای مدرک کارشناسی ارشد از دانشگاه
             صنعتی شیراز در رشته مهندسی کامپیوتر. مجردم. ورزشکارم. تقریبا کتاب
             زیاد میخونم. بردگیم دوست دارم و به برنامه نویسی تحت وب علاقه زیادی
-            دارم
+            دارم . در اینجا قراره اطلاعاتی که بدست میارم رو ثبت کنم.
           </p>
         </div>
         <div className={styles.footerColumn}>
@@ -39,6 +41,18 @@ const Footer = () => {
             بخش بندی مطالب
           </p>
           <hr className={`bg-light ${styles.titleDivider}`} />
+          <ul className={styles.sectionsList}>
+            {SECTIONS?.map((section) => (
+              <Link key={section.id} href={section.link}>
+                <a>
+                  <li className={`text-light ${styles.listItem}`}>
+                    <span className="margin-left-small">{section.icon}</span>
+                    {section.title}
+                  </li>
+                </a>
+              </Link>
+            ))}
+          </ul>
         </div>
         <div className={styles.footerColumn}>
           <p className={`text-light no-margin ${styles.title}`}>ارتباط با من</p>

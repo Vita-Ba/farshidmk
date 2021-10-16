@@ -20,7 +20,7 @@ export default function Layout({
         <link rel="icon" href={FAVICON} />
       </Head>
       <div className="header-section">
-        <p className="header-text">زندگی باید کرد</p>
+        <p className="header-text">زندگی را نفسی ارزش غم خوردن نیست</p>
         <HiMenu className="header-icon" />
       </div>
 
