@@ -2,6 +2,7 @@ import Head from "next/head";
 import { HiMenu } from "react-icons/hi";
 import Footer from "./Footer";
 
+//TODO: add menu functionality - styles be like netflix
 export default function Layout({
   title = "وبلاگ فرشید منوچهری",
   keywords = "فرشید منوچهری کلانتری , خلاصه کتاب , farshid manoochehri kalantari ",
@@ -10,7 +11,7 @@ export default function Layout({
   faviconType,
 }) {
   const FAVICON =
-    faviconType === "book" ? "./assets/favicon/book.ico" : "/favicon.ico";
+    faviconType === "book" ? "/assets/favicon/book.ico" : "/favicon.ico";
   return (
     <div className="root">
       <Head>
@@ -23,8 +24,7 @@ export default function Layout({
         <p className="header-text">زندگی را نفسی ارزش غم خوردن نیست</p>
         <HiMenu className="header-icon" />
       </div>
-
-      {children}
+      <section className="main">{children}</section>
       <Footer />
     </div>
   );

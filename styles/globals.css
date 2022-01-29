@@ -201,3 +201,16 @@ button:hover {
   height: auto;
   margin: auto;
 }
+
+.main {
+  margin-top: 20px;
+  font-size: medium;
+}
+
+.small-text {
+  font-size: small;
+}
+
+.smaller-text {
+  font-size: smaller;
+}

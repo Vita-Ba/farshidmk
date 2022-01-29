@@ -4,7 +4,7 @@ import getPosts from "shared/getPosts";
 
 const BlogPage = ({ posts }) => {
   return (
-    <Layout>
+    <Layout faviconType="book">
       <>
         <h3>در این قسمت خلاصه یا متنهای قشنگ کتابها را یادداشت کردم. </h3>
         {posts?.length > 0 ? (

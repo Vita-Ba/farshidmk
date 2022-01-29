@@ -1,0 +1,90 @@
+.root {
+  display: flex;
+}
+
+.aboutMeSection {
+  height: 100%;
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.aboutMeSection > img {
+  width: 85%;
+  padding: 4px;
+  border-radius: 50%;
+  border: 10px solid black;
+  margin-bottom: -55px;
+  z-index: 1;
+}
+
+.aboutMeTexts {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 8px;
+  padding-top: 40px;
+  background-color: black;
+  color: white;
+}
+.aboutMeTexts > h4 {
+  text-align: center;
+}
+.aboutMeTexts > p {
+  font-size: small;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.contactMe {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 8px;
+}
+
+.contactMe > div {
+  margin-bottom: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.contactMe > div > svg {
+  margin-left: 8px;
+}
+
+.hintText > SVG {
+  margin-left: 4px;
+}
+
+.hintText {
+  font-size: x-small;
+  background-color: black;
+  color: white;
+  margin-bottom: 8px;
+  padding: 4px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  width: fit-content;
+}
+
+.historySection {
+}
+.historySection > h4 {
+  margin-top: 30px;
+  margin-bottom: 0px;
+}
+.historySection > ul {
+  margin-top: 10px;
+}
+
+.emailAddress {
+  font-size: clamp(60%, 12px, 20px);
+}

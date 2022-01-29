@@ -2,6 +2,7 @@ import Link from "next/link";
 import styles from "@/styles/Footer.module.css";
 import { BsLinkedin, BsFacebook, BsTelegram } from "react-icons/bs";
 import { SECTIONS } from "../shared/sections";
+import aboutMeText from "shared/aboutMeText";
 
 const Footer = () => {
   return (
@@ -29,12 +30,7 @@ const Footer = () => {
         <div className={styles.aboutMeSection}>
           <p className={`text-light no-margin ${styles.title}`}>درباره من</p>
           <hr className={`bg-light ${styles.titleDivider}`} />
-          <p className="no-margin description-text text-light">
-            من فرشید منوچهری کلانتری هستم. دارای مدرک کارشناسی ارشد از دانشگاه
-            صنعتی شیراز در رشته مهندسی کامپیوتر. مجردم. ورزشکارم. تقریبا کتاب
-            زیاد میخونم. بردگیم دوست دارم و به برنامه نویسی تحت وب علاقه زیادی
-            دارم . در اینجا قراره اطلاعاتی که بدست میارم رو ثبت کنم.
-          </p>
+          <p className="no-margin description-text text-light">{aboutMeText}</p>
         </div>
         <div className={styles.footerColumn}>
           <p className={`text-light no-margin ${styles.title}`}>

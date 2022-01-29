@@ -2,7 +2,11 @@ import Link from "next/link";
 import Layout from "@/components/Layout";
 import styles from "@/styles/Home.module.css";
 import { SECTIONS } from "../shared/sections";
-
+import aboutMeText from "shared/aboutMeText";
+//TODO: show resume
+//TODO: show akharin mataleb
+//TODO: add about me verticaly
+//TODO: create other section
 export default function HomePage() {
   return (
     <Layout>
@@ -22,13 +26,7 @@ export default function HomePage() {
           </div>
           <hr />
           <p className={styles.introductionText}>
-            من فرشید منوچهری کلانتری هستم. دارای مدرک کارشناسی ارشد از دانشگاه
-            صنعتی شیراز در رشته مهندسی کامپیوتر.
-            <br />
-            <strong>
-              مجردم. ورزشکارم. تقریبا کتاب زیاد میخونم. بردگیم دوست دارم و به
-              برنامه نویسی تحت وب علاقه زیادی دارم
-            </strong>
+            {aboutMeText}
             &nbsp;تو این وبلاگ قراره خلاصه یا نکات مهمی از کتابهایی که میخونم رو
             توش بنویسم. نکات مهمی که یاد میگیرم تو دنیای برنامه نویسی رو اینجا
             ذخیره میکنم(هم خودم بهتر یاد میگیرم هم شاید یکی دعامون کرد و مشکل
