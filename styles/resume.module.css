@@ -1,9 +1,39 @@
+@media screen and (max-width: 600px) {
+  .root {
+    display: flex;
+    flex-direction: column;
+    padding: 8px;
+    align-items: center;
+  }
+  .aboutMeSection {
+    width: 100% !important;
+    display: flex;
+  }
+
+  .aboutMeSection > img {
+    max-width: 300px;
+  }
+  .aboutMeTexts {
+    background: rgb(0, 0, 0) !important;
+    background: linear-gradient(
+      360deg,
+      rgb(0 0 0 / 15%) 0%,
+      rgb(255 255 255 / 0%) 100%
+    ) !important;
+    border-left: 8px solid black;
+    border-bottom: 8px solid black;
+    color: black !important;
+  }
+  .emailAddress {
+    font-size: clamp(4vw, 16px, 20px) !important;
+  }
+}
+
 .root {
   display: flex;
 }
 
 .aboutMeSection {
-  height: 100%;
   width: 45%;
   display: flex;
   flex-direction: column;
@@ -16,17 +46,18 @@
   padding: 4px;
   border-radius: 50%;
   border: 10px solid black;
-  margin-bottom: -55px;
+  margin-bottom: -50%;
   z-index: 1;
 }
 
 .aboutMeTexts {
-  width: 70%;
+  height: 100%;
+  width: 80%;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 8px;
-  padding-top: 40px;
+  padding-top: 50%;
   background-color: black;
   color: white;
 }
@@ -75,8 +106,6 @@
   width: fit-content;
 }
 
-.historySection {
-}
 .historySection > h4 {
   margin-top: 30px;
   margin-bottom: 0px;
@@ -84,7 +113,6 @@
 .historySection > ul {
   margin-top: 10px;
 }
-
 .emailAddress {
   font-size: clamp(60%, 12px, 20px);
 }

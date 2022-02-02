@@ -87,7 +87,7 @@ a {
 
 .header-section {
   background-color: var(--gray-light);
-  z-index: 1;
+  z-index: 3;
   position: sticky;
   top: 0px;
   left: 0px;
@@ -213,4 +213,8 @@ button:hover {
 
 .smaller-text {
   font-size: smaller;
+}
+
+.flex-grow {
+  flex-grow: 1;
 }

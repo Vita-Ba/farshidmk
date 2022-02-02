@@ -47,6 +47,7 @@ export default function Resume() {
                 </span>
               </div>
             </div>
+            <div className="flex-grow"></div>
           </section>
         </div>
         <div className={styles.historySection}>

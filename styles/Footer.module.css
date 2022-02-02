@@ -19,6 +19,7 @@
     width: 800px;
   }
 }
+
 @media (max-width: 700px) {
   .bgCircle {
     width: 1000px;
@@ -111,6 +112,16 @@
   margin-bottom: 4px;
 }
 
+@media screen and (max-width: 600px) {
+  .socialIcon {
+    width: 100% !important;
+    align-items: center !important;
+    justify-content: space-around !important;
+  }
+  .socialIcon > * {
+    margin: 0px !important;
+  }
+}
 .socialIcon > * {
   margin-right: 8px;
   margin-left: 28px;
