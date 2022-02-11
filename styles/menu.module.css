@@ -1,0 +1,80 @@
+.nav {
+  position: fixed;
+  top: -100vh;
+  left: 0px;
+  transform: translateX(-50%);
+  left: 50%;
+  z-index: 4;
+}
+
+.firstLayer {
+  background-color: black;
+  width: 100%;
+  max-width: 1300px;
+  height: 100vh;
+  max-height: 600px;
+  transition: top 0.4s ease-in;
+  transition-delay: 0.8s;
+}
+
+.firstLayer.active {
+  top: 0px;
+  transition-delay: 0.3s;
+}
+
+.secondLayer {
+  background-color: rgb(255, 255, 255);
+  width: 95%;
+  height: 95%;
+  transition: top 0.4s ease-in;
+  transition-delay: 0.6s;
+}
+
+.secondLayer.active {
+  top: 0px;
+  transition-delay: 0.5s;
+}
+
+.thirdLayer {
+  background-color: rgb(0, 0, 0);
+  width: 95%;
+  height: 95%;
+  transition: top 0.5s ease-in;
+  transition-delay: 0.4s;
+  color: white;
+}
+
+.thirdLayer.active {
+  top: 0px;
+  transition-delay: 0.7s;
+}
+.thirdLayer > * {
+  opacity: 0;
+  transition: all 0.8s linear;
+}
+
+.thirdLayer.active > * {
+  opacity: 1;
+  transition-delay: 0.75s;
+}
+
+.closeIcon {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  color: white;
+}
+
+.listItem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style-type: none;
+}
+.listItem > span {
+  display: flex;
+}
+
+.itemSection {
+  margin-top: 30px;
+}
